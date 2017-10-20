@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        
+        <link rel="stylesheet" href="lib/nivo-slider.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="lib/style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css" />
+    </head>
+    <body>
+       <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="login.html">UniExams</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#" id="toInfo">Info</a></li>
+      <li><a href="#" id='toContacts'>Contatti</a></li>      
+    </ul>
+  </div>
+</nav>
+      <section id="pageContent">
+       <div class="container" id="allContent">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1><b>UniExams</b></h1>
+                </div>
+            </div>
+            <div id="slider" class="nivoSlider">
+                <img src="myimg/img1.jpg" alt="" />
+                <img src="myimg/img2.jpg" alt="" />
+                <img src="myimg/img3.jpg" alt="" />
+                <img src="myimg/img4.jpg" alt="" />
+            </div>
+        </div>
+        <section id="content">
+            <div class="container" id="container">
+                <div class="row">
+                    <div class="col-md-12" align="center">
+                        <form name='login' action='phpPage/loginPage.php' method="POST">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+                             </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                             </div>
+                            <div class="input-group" style="padding-top: 20px;">
+                                <input type="submit" name="btnAccedi" value="ACCEDI">
+                                <input type="reset" value="RESET">
+                            </div>
+                        </form>
+                        <h2><i>Sei nuovo? Allora dai, registrati!</i></h2>
+                        <div style="padding-bottom: 40px;">
+                        <a href="#" class="btn btn-primary" id="registr">REGISTRAMI</a>
+                    </div>
+                    </div>                        
+                </div>
+            </div>      
+        </section>
+        </div>
+      </section>
+       
+        <script type="text/javascript" src="lib/jquery-1.4.3.min.js"></script>
+        <script type="text/javascript" src="lib/jquery.nivo.slider.js"></script>
+        <script type="text/javascript">
+            $(window).load(function() {
+             $('#slider').nivoSlider();
+            });      
+        </script>
+        <script type="text/javascript" src="lib/ajaxToRegistration.js"></script>
+        <script type="text/javascript" src="lib/ajaxToInfo.js"></script>
+        <script type='text/javascript' src='lib/ajaxToContacts.js'></script>
+    </body>
+</html>
